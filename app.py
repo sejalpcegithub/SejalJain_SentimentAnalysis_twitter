@@ -4,7 +4,7 @@ import pickle
 
 
 app = Flask(__name__)
-classifier1 = pickle.load(open('twitterReviewnlp.pkl','rb')) 
+classifier = pickle.load(open('twitter_review.pkl','rb')) 
 
 
 @app.route('/')
@@ -60,13 +60,13 @@ def index4():
 
     # Creating the Bag of Words model
     from sklearn.feature_extraction.text import CountVectorizer
-    cv = CountVectorizer(max_features = 30000)
+    cv = CountVectorizer(max_features = 15000)
     X = cv.fit_transform(corpus).toarray()
     y = dataset.iloc[:, 3].values
     
     input_data = [exp] 
     input_data = cv.transform(input_data).toarray()
-    input_pred = classifier1.predict(input_data)
+    input_pred = classifier.predict(input_data)
     input_pred = input_pred.astype(int)
     
     if input_pred[0] == 1:
