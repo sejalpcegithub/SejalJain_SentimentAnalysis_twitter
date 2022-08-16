@@ -10,5 +10,4 @@ scikit-learn
 matplotlib
 pandas
 nltk
-nltk.corpus
-nltk.stem.porter
+
