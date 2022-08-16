@@ -69,12 +69,12 @@ def index4():
     input_pred = classifier1.predict(input_data)
     input_pred = input_pred.astype(int)
     
-    if input_pred == 1:
+    if input_pred[0] == 1:
        
-      input_pred ="Predicted sentiment for given tweets is Positive "
+      input_pred =1
     
     else:
-        input_pred="Predicted sentiment for given tweets is Negative"
+        input_pred=-1
     return render_template('index4.html', prediction_text=' Predicted sentiment for given tweets is: {}'.format(input_pred))
 
 if __name__ == "__main__":
