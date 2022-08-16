@@ -71,10 +71,10 @@ def index4():
     
     if input_pred[0] == 1:
        
-       return render_template('index4.html', prediction_text='Predicted sentiment for given tweets is Positive ')
+       prediction_text="Predicted sentiment for given tweets is Positive "
     
     else:
-       return render_template('index4.html', prediction_text='Predicted sentiment for given tweets is Negative ')
+        prediction_text="Predicted sentiment for given tweets is Negative"
 
 
 
