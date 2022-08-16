@@ -71,8 +71,7 @@ def index4():
     
     if input_pred[0] == 1:
        
-      input_pred =1
-    
+        input_pred=1
     else:
         input_pred=-1
     return render_template('index4.html', prediction_text=' Predicted sentiment for given tweets is: {}'.format(input_pred))
