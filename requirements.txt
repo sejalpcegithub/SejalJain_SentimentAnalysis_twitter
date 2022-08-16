@@ -1,4 +1,5 @@
 Flask
+pickle
 gunicorn
 itsdangerous
 Jinja2
@@ -11,4 +12,4 @@ matplotlib
 pandas
 flasgger
 nltk
-pickle
+
