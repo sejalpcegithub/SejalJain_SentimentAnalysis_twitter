@@ -69,7 +69,7 @@ def index4():
     input_pred = classifier1.predict(input_data)
     input_pred = input_pred.astype(int)
     
-    if input_pred[0] == 1:
+    if input_pred == 1:
        
       input_pred ="Predicted sentiment for given tweets is Positive "
     
