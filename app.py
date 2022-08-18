@@ -31,6 +31,9 @@ def MiniProjects():
     return render_template('MiniProjects.html')
 
 
+@app.route('/qrcode')
+def qrcode():
+    return render_template('qrcode.html')
   
 @app.route('/index4',methods=['GET'])
 def index4():
